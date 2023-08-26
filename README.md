@@ -27,22 +27,17 @@ Database Name: tiktok-clone
 Database Collections:
 
 Profile:
-| Key | Value |
+| Key | Type |
 | --- | --- |
 | `Document ID` | String |
 | `image` | String |
 | `bio` | String |
 | `user_id` | String |
 | `name` | String |
-
-Profile:
-| Document ID: String | Document ID: String
-image: String
-bio: String
-user_id: String
-name: String
     
-Profile Indexes: KEY: user_id, TYPE: key, ATTRIBUTE: user_id, ASC/DESC: asc
+| KEY | TYPE | ATTRIBUTE | ASC/DESC |
+| ------------- | ------------- |
+| user_id | key | user_id | asc |
 
 Profile Settings (Update Permissions):
     Add Role = All guests / Read
