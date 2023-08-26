@@ -105,6 +105,14 @@ export interface CommentsCompTypes {
     params: { userId: string; postId: string; };
 }
 
+export interface PostPageTypes {
+    params: { userId: string; postId: string; };
+}
+
+export interface ProfilePageTypes {
+    params: { id: string; };
+}
+
 export interface SingleCommentCompTypes {
     params: { userId: string; postId: string; };
     comment: CommentWithProfile

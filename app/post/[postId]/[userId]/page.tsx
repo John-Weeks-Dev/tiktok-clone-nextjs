@@ -8,13 +8,14 @@ import { AiOutlineClose } from "react-icons/ai"
 import { BiChevronDown, BiChevronUp } from "react-icons/bi"
 import { useRouter } from "next/navigation"
 import ClientOnly from "@/app/components/ClientOnly"
-import { Post } from "@/app/types"
+import { Post, PostPageTypes } from "@/app/types"
 import { usePostStore } from "@/app/stores/post"
 import { useLikeStore } from "@/app/stores/like"
 import { useCommentStore } from "@/app/stores/comment"
 import useCreateBucketUrl from "@/app/hooks/useCreateBucketUrl"
 
-export default function Post({ params }: any) {
+export default function Post({ params }: PostPageTypes) {
+    console.log(params)
 
     let { postById, postsByUser, setPostById, setPostsByUser } = usePostStore()
     let { setLikesByPost } = useLikeStore()

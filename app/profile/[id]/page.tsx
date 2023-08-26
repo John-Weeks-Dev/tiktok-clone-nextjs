@@ -6,13 +6,13 @@ import { BsPencil } from "react-icons/bs"
 import { useEffect } from "react"
 import { useUser } from "@/app/context/user"
 import ClientOnly from "@/app/components/ClientOnly"
-import { User } from "@/app/types"
+import { ProfilePageTypes, User } from "@/app/types"
 import { usePostStore } from "@/app/stores/post"
 import { useProfileStore } from "@/app/stores/profile"
 import { useGeneralStore } from "@/app/stores/general"
 import useCreateBucketUrl from "@/app/hooks/useCreateBucketUrl"
 
-export default function Profile({ params }: any) {
+export default function Profile({ params }: ProfilePageTypes) {
     const contextUser = useUser()
     let { postsByUser, setPostsByUser } = usePostStore()
     let { setCurrentProfile, currentProfile } = useProfileStore()
