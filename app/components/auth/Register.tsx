@@ -123,7 +123,7 @@ export default function Register() {
                         disabled={!name || !email || !password || !confirmPassword || loading}
                         onClick={() => register()} 
                         className={`
-                            flex items-center w-full text-[17px] font-semibold text-white py-3 rounded-sm
+                            flex items-center justify-center w-full text-[17px] font-semibold text-white py-3 rounded-sm
                             ${(!name || !email || !password || !confirmPassword) ? 'bg-gray-200' : 'bg-[#F02C56]'}
                         `}
                     >
