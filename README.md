@@ -26,6 +26,15 @@ Database Name: tiktok-clone
 
 Database Collections:
 
+<div>
+    <h4>Profile:</h4>
+        <p>Document ID: String</p>
+        <p>image: String</p>
+        <p>bio: String</p>
+        <p>user_id: String</p>
+        <p>name: String</p>
+</div>
+
 Profile:
     Document ID: String
     image: String
