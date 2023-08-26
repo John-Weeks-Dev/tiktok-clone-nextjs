@@ -3,12 +3,14 @@ import TextInput from "../TextInput";
 import { useState } from "react";
 import { ShowErrorObject } from "@/app/types";
 import { useUser } from "@/app/context/user";
+import { BiLoaderCircle } from "react-icons/bi";
 
 export default function Register() {
     let { setIsLoginOpen } = useGeneralStore();
 
     const contextUser = useUser()
 
+    const [loading, setLoading] = useState<boolean>(false);
     const [name, setName] = useState<string | ''>('');
     const [email, setEmail] = useState<string | ''>('');
     const [password, setPassword] = useState<string | ''>('');
@@ -56,10 +58,13 @@ export default function Register() {
         if (!contextUser) return
 
         try {
+            setLoading(true)
             await contextUser.register(name, email, password)
+            setLoading(false)
             setIsLoginOpen(false)
         } catch (error) {
             console.log(error)
+            setLoading(false)
             alert(error)
         }
     }
@@ -115,14 +120,14 @@ export default function Register() {
 
                 <div className="px-6 pb-2 mt-6">
                     <button 
-                        disabled={!name || !email || !password || !confirmPassword}
+                        disabled={!name || !email || !password || !confirmPassword || loading}
                         onClick={() => register()} 
                         className={`
                             w-full text-[17px] font-semibold text-white py-3 rounded-sm
                             ${(!name || !email || !password || !confirmPassword) ? 'bg-gray-200' : 'bg-[#F02C56]'}
                         `}
                     >
-                        Log in
+                        {loading ? <BiLoaderCircle className="animate-spin" color="#ffffff" size={25} /> : 'Register'}
                     </button>
                 </div>
             </div>
