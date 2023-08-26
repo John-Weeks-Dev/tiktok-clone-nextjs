@@ -26,21 +26,15 @@ Database Name: tiktok-clone
 
 Database Collections:
 
-<div>
-    <h4>Profile:</h4>
-        <p>Document ID: String</p>
-        <p>image: String</p>
-        <p>bio: String</p>
-        <p>user_id: String</p>
-        <p>name: String</p>
-</div>
+Profile:
+| Document ID: String | image: String | bio: String | user_id: String | name: String |
 
 Profile:
-    Document ID: String
-    image: String
-    bio: String
-    user_id: String
-    name: String
+| Document ID: String | Document ID: String
+image: String
+bio: String
+user_id: String
+name: String
     
 Profile Indexes: KEY: user_id, TYPE: key, ATTRIBUTE: user_id, ASC/DESC: asc
 
