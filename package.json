@@ -14,6 +14,7 @@
     "@types/react-dom": "18.2.7",
     "appwrite": "^11.0.1",
     "autoprefixer": "10.4.15",
+    "debounce": "^1.2.1",
     "image-js": "^0.35.4",
     "moment": "^2.29.4",
     "next": "13.4.19",
@@ -27,6 +28,7 @@
     "zustand": "^4.4.1"
   },
   "devDependencies": {
+    "@types/debounce": "^1.2.1",
     "canvas": "^2.11.2",
     "raw-loader": "^4.0.2"
   }
