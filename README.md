@@ -22,9 +22,9 @@ You'll have to set up an AppWrite account, and then add all of the details into 
 
 ## AppWrite Schema
 
-## Database Name: tiktok-clone
+### Database Name: tiktok-clone
 
-## Profile Collection:
+### Profile Collection:
 | Key | Type |
 | --- | --- |
 | `Document ID` | String |
@@ -44,7 +44,7 @@ Profile Settings (Update Permissions):
 | All guests    | Read          |
 | All users     | Create, Read, Update, Delete |
 
-## Post Collection:
+### Post Collection:
 | Key | Type |
 | --- | --- |
 | `Document ID` | String |
@@ -64,7 +64,7 @@ Profile Settings (Update Permissions):
 | All guests    | Read          |
 | All users     | Create, Read, Update, Delete |
 
-## Like Collection:
+### Like Collection:
 | Key | Type |
 | --- | --- |
 | `Document ID` | String |
@@ -84,7 +84,7 @@ Like Settings (Update Permissions):
 | All guests    | Read          |
 | All users     | Create, Read, Update, Delete |
 
-## Comment Collection:
+### Comment Collection:
 | Key | Type |
 | --- | --- |
 | `Document ID` | String |
