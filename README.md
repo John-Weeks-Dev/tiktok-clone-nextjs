@@ -37,6 +37,7 @@ Profile Indexes:
 | KEY           | TYPE          | ATTRIBUTE     | ASC/DESC      |
 | ------------- | ------------- | ------------- | ------------- |
 | user_id       | key           | user_id       | asc           |
+| namne         | key           | name          | asc           |
 
 Profile Settings (Update Permissions):
 | Add Role      | PERMISSIONS   |
