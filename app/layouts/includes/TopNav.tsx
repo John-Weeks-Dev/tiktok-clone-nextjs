@@ -28,7 +28,6 @@ export default function TopNav() {
 
         try {
             const result = await useSearchProfilesByName(event.target.value)
-            console.log(result)
             if (result) return setSearchProfiles(result)
             setSearchProfiles([])
         } catch (error) {
