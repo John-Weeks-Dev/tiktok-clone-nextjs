@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import UploadLayout from "../layouts/UploadLayout";
 import { BiLoaderCircle, BiSolidCloudUpload } from "react-icons/bi"
 import { AiOutlineCheckCircle } from "react-icons/ai";
@@ -19,6 +19,10 @@ export default function Upload() {
     let [file, setFile] = useState<File | null>(null);
     let [error, setError] = useState<UploadError | null>(null);
     let [isUploading, setIsUploading] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (!contextUser?.user) router.push('/')
+    }, [contextUser])
 
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const files = event.target.files;
