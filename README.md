@@ -27,7 +27,13 @@ Database Name: tiktok-clone
 Database Collections:
 
 Profile:
-| Document ID: String | image: String | bio: String | user_id: String | name: String |
+| Key | Value |
+| --- | --- |
+| `Document ID` | String |
+| `image` | String |
+| `bio` | String |
+| `user_id` | String |
+| `name` | String |
 
 Profile:
 | Document ID: String | Document ID: String
