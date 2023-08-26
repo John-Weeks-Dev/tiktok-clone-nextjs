@@ -26,7 +26,7 @@ Database Name: tiktok-clone
 
 Database Collections:
 
-Profile:
+# Profile:
 | Key | Type |
 | --- | --- |
 | `Document ID` | String |
@@ -34,54 +34,77 @@ Profile:
 | `bio` | String |
 | `user_id` | String |
 | `name` | String |
-    
-| KEY | TYPE | ATTRIBUTE | ASC/DESC |
+
+Profile Indexes:
+| KEY           | TYPE          | ATTRIBUTE     | ASC/DESC      |
+| ------------- | ------------- | ------------- | ------------- |
+| user_id       | key           | user_id       | asc           |
+
+Profile Settings (Update Permissions):
+| Add Role      | PERMISSIONS   |
 | ------------- | ------------- |
-| user_id | key | user_id | asc |
+| All guests    | Read          |
+| All users     | Create, Read, Update, Delete |
 
-Profile Settings (Update Permissions):
-    Add Role = All guests / Read
-    Add Role = All users / Create, Read, Update, Delete
-
-Post:
-    Document ID: String
-    user_id: String
-    video_url: String
-    text: String
-    created_at: String
+# Post:
+| Key | Type |
+| --- | --- |
+| `Document ID` | String |
+| `user_id` | String |
+| `video_url` | String |
+| `text` | String |
+| `created_at` | String |
     
-Post Indexes: KEY: user_id, TYPE: key, ATTRIBUTE: user_id, ASC/DESC: asc
+Post Indexes:
+| KEY           | TYPE          | ATTRIBUTE     | ASC/DESC      |
+| ------------- | ------------- | ------------- | ------------- |
+| user_id       | key           | user_id       | asc           |
 
 Profile Settings (Update Permissions):
-    Add Role = All guests / Read
-    Add Role = All users / Create, Read, Update, Delete
+| Add Role      | PERMISSIONS   |
+| ------------- | ------------- |
+| All guests    | Read          |
+| All users     | Create, Read, Update, Delete |
 
-Like:
-    Document ID: String
-    user_id: String
-    post_id: String
+# Like:
+| Key | Type |
+| --- | --- |
+| `Document ID` | String |
+| `user_id` | String |
+| `post_id` | String |
 
 Like Indexes: 
-    KEY: user_id, TYPE: key, ATTRIBUTE: user_id, ASC/DESC: asc
-    KEY: id, TYPE: unique, ATTRIBUTE: $id, ASC/DESC: asc
-    KEY: post_id, TYPE: key, ATTRIBUTE: post_id, ASC/DESC: asc
+| KEY           | TYPE          | ATTRIBUTE     | ASC/DESC      |
+| ------------- | ------------- | ------------- | ------------- |
+| user_id       | key           | user_id       | asc           |
+| id            | unique        | id            | asc           |
+| post_id       | key           | post_id       | asc           |
 
 Like Settings (Update Permissions):
-    Add Role = All guests / Read
-    Add Role = All users / Create, Read, Update, Delete
+| Add Role      | PERMISSIONS   |
+| ------------- | ------------- |
+| All guests    | Read          |
+| All users     | Create, Read, Update, Delete |
 
 Comment:
-    Document ID: String
-    user_id: String
-    post_id: String
-    text: String
-    created_at: String
+| Key | Type |
+| --- | --- |
+| `Document ID` | String |
+| `user_id` | String |
+| `post_id` | String |
+| `text` | String |
+| `created_at` | String |
     
-Comment Indexes: KEY: post_id, TYPE: key, ATTRIBUTE: post_id, ASC/DESC: asc
+Comment Indexes:
+| KEY           | TYPE          | ATTRIBUTE     | ASC/DESC      |
+| ------------- | ------------- | ------------- | ------------- |
+| post_id       | key           | post_id       | asc           |
 
 Comment Settings (Update Permissions):
-    Add Role = All guests / Read
-    Add Role = All users / Create, Read, Update, Delete
+| Add Role      | PERMISSIONS   |
+| ------------- | ------------- |
+| All guests    | Read          |
+| All users     | Create, Read, Update, Delete |
 
 
 Once you've connected your application to AppWrite. Run the commands.
