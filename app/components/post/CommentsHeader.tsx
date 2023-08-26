@@ -22,8 +22,6 @@ import { CommentsHeaderCompTypes } from "@/app/types"
 
 export default function CommentsHeader({ post, params }: CommentsHeaderCompTypes) {
 
-    console.log('post', post)
-
     let { setLikesByPost, likesByPost } = useLikeStore()
     let { commentsByPost, setCommentsByPost } = useCommentStore()
     let { setIsLoginOpen } = useGeneralStore()
