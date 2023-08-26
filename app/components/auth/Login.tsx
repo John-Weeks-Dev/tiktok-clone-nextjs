@@ -83,7 +83,7 @@ export default function Login() {
                         disabled={!email || !password || loading}
                         onClick={() => login()} 
                         className={`
-                            w-full text-[17px] font-semibold text-white py-3 rounded-sm
+                            flex items-center w-full text-[17px] font-semibold text-white py-3 rounded-sm
                             ${(!email || !password) ? 'bg-gray-200' : 'bg-[#F02C56]'}
                         `}
                     >
