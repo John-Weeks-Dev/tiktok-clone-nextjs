@@ -26,7 +26,7 @@ Database Name: tiktok-clone
 
 Database Collections:
 
-# Profile:
+## Profile:
 | Key | Type |
 | --- | --- |
 | `Document ID` | String |
@@ -46,7 +46,7 @@ Profile Settings (Update Permissions):
 | All guests    | Read          |
 | All users     | Create, Read, Update, Delete |
 
-# Post:
+## Post:
 | Key | Type |
 | --- | --- |
 | `Document ID` | String |
@@ -66,7 +66,7 @@ Profile Settings (Update Permissions):
 | All guests    | Read          |
 | All users     | Create, Read, Update, Delete |
 
-# Like:
+## Like:
 | Key | Type |
 | --- | --- |
 | `Document ID` | String |
@@ -86,7 +86,7 @@ Like Settings (Update Permissions):
 | All guests    | Read          |
 | All users     | Create, Read, Update, Delete |
 
-# Comment:
+## Comment:
 | Key | Type |
 | --- | --- |
 | `Document ID` | String |
