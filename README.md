@@ -86,7 +86,7 @@ Like Settings (Update Permissions):
 | All guests    | Read          |
 | All users     | Create, Read, Update, Delete |
 
-Comment:
+# Comment:
 | Key | Type |
 | --- | --- |
 | `Document ID` | String |
