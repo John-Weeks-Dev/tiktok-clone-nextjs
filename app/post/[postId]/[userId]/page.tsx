@@ -109,7 +109,9 @@ export default function Post({ params }: any) {
                     <div className="py-7" />
 
                         <ClientOnly>
-                            <CommentsHeader post={postById} params={params}/>
+                            {postById ? (
+                                <CommentsHeader post={postById} params={params}/>
+                            ) : null}
                         </ClientOnly>
                         <Comments params={params}/>
 
