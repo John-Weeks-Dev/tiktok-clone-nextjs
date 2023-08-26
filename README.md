@@ -24,9 +24,7 @@ You'll have to set up an AppWrite account, and then add all of the details into 
 
 Database Name: tiktok-clone
 
-Database Collections:
-
-## Profile:
+## Profile Collection:
 | Key | Type |
 | --- | --- |
 | `Document ID` | String |
@@ -46,7 +44,7 @@ Profile Settings (Update Permissions):
 | All guests    | Read          |
 | All users     | Create, Read, Update, Delete |
 
-## Post:
+## Post Collection:
 | Key | Type |
 | --- | --- |
 | `Document ID` | String |
@@ -66,7 +64,7 @@ Profile Settings (Update Permissions):
 | All guests    | Read          |
 | All users     | Create, Read, Update, Delete |
 
-## Like:
+## Like Collection:
 | Key | Type |
 | --- | --- |
 | `Document ID` | String |
@@ -86,7 +84,7 @@ Like Settings (Update Permissions):
 | All guests    | Read          |
 | All users     | Create, Read, Update, Delete |
 
-## Comment:
+## Comment Collection:
 | Key | Type |
 | --- | --- |
 | `Document ID` | String |
