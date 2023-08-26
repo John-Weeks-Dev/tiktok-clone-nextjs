@@ -4,7 +4,7 @@ const useCreateProfile = async (userId: string, name: string, image: string, bio
     try {
         await database.createDocument(
             String(process.env.NEXT_PUBLIC_DATABASE_ID), 
-            String(process.env.COLLECTION_ID_PROFILE),
+            String(process.env.NEXT_PUBLIC_COLLECTION_ID_PROFILE),
             ID.unique(), 
         {
             user_id: userId,

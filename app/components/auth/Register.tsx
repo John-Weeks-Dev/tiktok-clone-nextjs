@@ -4,11 +4,13 @@ import { useState } from "react";
 import { ShowErrorObject } from "@/app/types";
 import { useUser } from "@/app/context/user";
 import { BiLoaderCircle } from "react-icons/bi";
+import { useRouter } from "next/navigation";
 
 export default function Register() {
     let { setIsLoginOpen } = useGeneralStore();
 
     const contextUser = useUser()
+    const router = useRouter()
 
     const [loading, setLoading] = useState<boolean>(false);
     const [name, setName] = useState<string | ''>('');
@@ -62,6 +64,7 @@ export default function Register() {
             await contextUser.register(name, email, password)
             setLoading(false)
             setIsLoginOpen(false)
+            router.refresh()
         } catch (error) {
             console.log(error)
             setLoading(false)

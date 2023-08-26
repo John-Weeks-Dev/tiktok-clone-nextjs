@@ -34,11 +34,10 @@ const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     try {
       const promise = await account.create(ID.unique(), email, password, name)
       await account.createEmailSession(email, password);
-      
-      if (promise) {
-        await useCreateProfile(promise?.$id, name, String(process.env.NEXT_PUBLIC_PLACEHOLDER_DEAFULT_IMAGE_ID), '')
-        await checkUser()
-      } 
+
+      await useCreateProfile(promise?.$id, name, String(process.env.NEXT_PUBLIC_PLACEHOLDER_DEAFULT_IMAGE_ID), '')
+      await checkUser() 
+
     } catch (error) {
       console.error(error);
       throw error;
