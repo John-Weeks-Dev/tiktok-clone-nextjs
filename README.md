@@ -22,7 +22,7 @@ You'll have to set up an AppWrite account, and then add all of the details into 
 
 ## AppWrite Schema
 
-Database Name: tiktok-clone
+## Database Name: tiktok-clone
 
 ## Profile Collection:
 | Key | Type |
