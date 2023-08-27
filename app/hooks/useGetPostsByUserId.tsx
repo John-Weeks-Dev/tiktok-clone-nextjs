@@ -6,7 +6,8 @@ const useGetPostsByUser = async (userId: string) => {
             String(process.env.NEXT_PUBLIC_DATABASE_ID), 
             String(process.env.NEXT_PUBLIC_COLLECTION_ID_POST), 
             [
-                Query.equal('user_id', userId)
+                Query.equal('user_id', userId),
+                Query.orderDesc("$id")
             ]
         );
         const documents = response.documents;
