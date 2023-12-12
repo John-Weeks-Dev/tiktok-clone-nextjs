@@ -182,7 +182,7 @@ export default function Upload() {
                                 <div className="absolute -bottom-12 flex items-center justify-between z-50 rounded-xl border w-full p-2 border-gray-300">
                                     <div className="flex items-center truncate">
                                         <AiOutlineCheckCircle size="16" className="min-w-[16px]"/>
-                                        <p className="text-[11px] pl-1 truncate text-ellipsis">{File.name}</p>
+                                        <p className="text-[11px] pl-1 truncate text-ellipsis">{file ? file?.name : ''}</p>
                                     </div>
                                     <button onClick={() => clearVideo()} className="text-[11px] ml-2 font-semibold">
                                         Change
